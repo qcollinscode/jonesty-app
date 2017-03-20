@@ -3784,42 +3784,84 @@
   left: 2em !important;
 }
 
-/* line 1, ../sass/_layout.scss */
-nav {
+/* line 2, ../sass/_layout.scss */
+header nav {
   border-radius: 0 !important;
 }
-
-/* line 5, ../sass/_layout.scss */
-.topNav {
+/* line 6, ../sass/_layout.scss */
+header .topNav {
   margin-bottom: 0;
   background: #fff;
 }
-/* line 8, ../sass/_layout.scss */
-.topNav a {
+/* line 9, ../sass/_layout.scss */
+header .topNav a {
   color: black !important;
 }
-/* line 10, ../sass/_layout.scss */
-.topNav a:hover {
+/* line 11, ../sass/_layout.scss */
+header .topNav a:hover {
   color: grey !important;
 }
-/* line 14, ../sass/_layout.scss */
-.topNav .topNav-brand {
+/* line 15, ../sass/_layout.scss */
+header .topNav .topNav-brand {
   font-size: 15px;
 }
-/* line 17, ../sass/_layout.scss */
-.topNav li > a {
+/* line 18, ../sass/_layout.scss */
+header .topNav li > a {
   border-right: 0.1px solid #e7e7e7;
 }
-/* line 20, ../sass/_layout.scss */
-.topNav .cart-items {
+/* line 21, ../sass/_layout.scss */
+header .topNav .cart-items {
   background-color: maroon;
   padding: 4px 8px;
   color: white;
   font-weight: bold;
   border-radius: 50%;
 }
-
-/* line 29, ../sass/_layout.scss */
-.bottomNav {
+/* line 30, ../sass/_layout.scss */
+header .bottomNav {
+  border: none;
+  font-weight: bolder;
+  height: 8em;
   min-height: 8em;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  justify-content: center;
+}
+/* line 39, ../sass/_layout.scss */
+header .bottomNav .navbar-brand {
+  font-family: 'crimson text';
+  font-size: 3.5em;
+  letter-spacing: 0.1em;
+}
+/* line 45, ../sass/_layout.scss */
+header .bottomNav .container .mainCart {
+  position: relative;
+  line-height: 0.45em;
+  font-size: 45px !important;
+  color: #34495e;
+}
+/* line 50, ../sass/_layout.scss */
+header .bottomNav .container .mainCart .cart-items {
+  position: absolute;
+  top: -1em;
+  width: 60%;
+  text-align: center;
+  left: 1.2em;
+  transform: scale(0.9);
+  font-size: 17.2px;
+  font-weight: bolder;
+  color: #34495e;
+}
+/* line 60, ../sass/_layout.scss */
+header .bottomNav .container .mainCart .cart-items:after {
+  content: '';
+  padding: 15px 18px;
+  border-radius: 50%;
+  background-color: white;
+  top: -0.28em;
+  box-shadow: 0px 0px 18px -10px black;
+  position: absolute;
+  left: -0.25em;
+  z-index: -1;
 }

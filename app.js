@@ -57,7 +57,8 @@ Q:::::::QQ::::::::Q   C:::::CCCCCCCC::::C  C:::::CCCCCCCC::::CO:::::::OOO:::::::
    app.get("/", function(req, res) {
      var num = {
        login: false,
-       items: 124
+       items: 4,
+       userName: 'Joe32'
      };
      res.render("home", {num: num});
    });

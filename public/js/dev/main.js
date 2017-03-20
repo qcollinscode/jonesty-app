@@ -5,20 +5,68 @@
             this.bindEvents();
         },
         DOMCache: function() {
-            this.subNav = document.querySelector("#ls1-menu"),
-            this.subNavContainer = document.querySelector("#sublist-container"),
-            this.arrow = document.querySelector('.fa-chevron-down'),
-            this.storeLnk = document.querySelector('.ls7');
+            this.jumbotron = $(".jumbotron");
+            this.window = $(window);
+            this.body = $("body");
+            this.featPop = $(".feat-pop > span");
+            this.background = $('[data-type="background"]');
+            this.scrollTop = this.window.pageYOffset || document.documentElement.scrollTop;
         },
         bindEvents: function() {
-            this.storeLnk.addEventListener('click', this.changeMenu.bind(this));
+            if(navigator.userAgent.match(/Trident\/7\./)) {
+                this.body.on("mousewheel", this.preventImageBug.bind(this));
+                this.body.keydown(this.preventKeyDownBug.bind(this));
+            };
+            for(var x = 0; x < this.featPop.length; x++) {
+                this.featPop[x].addEventListener("click", this.selectEvnt);
+            }
         },
-        changeMenu: function() {
-            this.storeLnk.classList.toggle('hi7-bg');
-            this.arrow.classList.toggle('ico-s');
-            this.subNavContainer.classList.toggle('hi7');
-            this.subNav.classList.toggle('sub-hi7');
+        selectEvnt: function() {
+            const featPop = $(".feat-pop > span");
+            removeClass([featPop[0], featPop[1]], 'feat-pop-select');
+            addClass($(this), 'feat-pop-select');
+        },
+        preventImageBug: function() {
+            event.preventDefault();
+            const wheelDelta = event.wheelDelta;
+            const currentScrollPosition = window.pageYOffset;
+            window.scrollTo(0, currentScrollPosition - wheelDelta);
+        },
+        preventKeyDownBug: function(e) {
+            e.preventDefault();
+            const currentScrollPosition = window.pageYOffset;
+            switch (e.which) {
+                case 38:
+                    window.scrollTo(0, currentScrollPosition - 120);
+                    break;
+                case 40:
+                    window.scrollTo(0, currentScrollPosition + 120);
+                    break;
+                default: return;
+            };
         }
     };
     qraynix.init();
 }());
+
+function removeClass(elName, className) {
+  if (elName.length > 0) {
+    for(var x = 0; x < elName.length; x++) {
+      elName[x].classList.remove(className);
+    }
+  } else {
+      elName.classList.remove(className);
+  }
+  return elName;
+}
+
+function addClass(elName, className) {
+  if (elName.length > 0) {
+    for(var x = 0; x < elName.length; x++) {
+      elName[x].classList.add(className);
+    }
+  } else {
+      elName.classList.add(className);
+  }
+  return elName;
+}

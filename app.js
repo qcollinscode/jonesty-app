@@ -55,7 +55,11 @@ Q:::::::QQ::::::::Q   C:::::CCCCCCCC::::C  C:::::CCCCCCCC::::CO:::::::OOO:::::::
 
    /** Home **/
    app.get("/", function(req, res) {
-     res.render("home");
+     var num = {
+       login: false,
+       items: 124
+     };
+     res.render("home", {num: num});
    });
 
  /************************************

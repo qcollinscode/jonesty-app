@@ -1,0 +1,31 @@
+nav {
+    border-radius: 0!important;
+}
+
+.topNav {
+    margin-bottom: 0;
+    background: #fff;
+    a {
+        color: black!important;
+        &:hover {
+            color: grey!important;
+        }
+    }
+    .topNav-brand {
+        font-size: 15px;
+    }
+    li > a {
+        border-right: 0.1px solid #e7e7e7;
+    }
+    .cart-items {
+        background-color: maroon;
+        padding: 4px 8px;
+        color: white;
+        font-weight: bold;
+        border-radius: 50%;
+    }
+}
+
+.bottomNav {
+    min-height: 8em;
+}

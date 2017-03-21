@@ -10,18 +10,32 @@
             this.jumbotron = $(".jumbotron");
             this.window = $(window);
             this.body = $("body");
+            this.productImg = $('.product-img');
             this.featPop = $(".feat-pop > span");
             this.background = $('[data-type="background"]');
             this.scrollTop = this.window.pageYOffset || document.documentElement.scrollTop;
         },
         bindEvents: function bindEvents() {
+            var animateOverlay = this.animateOverlay;
             if (navigator.userAgent.match(/Trident\/7\./)) {
                 this.body.on("mousewheel", this.preventImageBug.bind(this));
                 this.body.keydown(this.preventKeyDownBug.bind(this));
             };
+            for (var x = 0; x < this.productImg.length; x++) {
+                this.productImg[x].addEventListener("mouseover", this.animateOverlayOn.bind(this));
+                this.productImg[x].addEventListener("mouseout", this.animateOverlayOff.bind(this));
+            }
             for (var x = 0; x < this.featPop.length; x++) {
                 this.featPop[x].addEventListener("click", this.selectEvnt);
             }
+        },
+        animateOverlayOn: function animateOverlayOn(e) {
+            var target = e.target;
+            addClass([target], 'animate-overlay');
+        },
+        animateOverlayOff: function animateOverlayOff(e) {
+            var target = e.target;
+            removeClass([target], 'animate-overlay');
         },
         selectEvnt: function selectEvnt() {
             var featPop = $(".feat-pop > span");

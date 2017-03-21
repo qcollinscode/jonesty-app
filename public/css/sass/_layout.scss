@@ -118,19 +118,86 @@ header {
     font-size: 1.3em;
     font-weight: bolder;
     color: lightgrey;
+    margin-bottom: 4em;
+    & > div:first-child {
+        margin-bottom: 3em;
+    }
+    .feat-pop-container {
+        display: flex;
+        justify-content: center;
+    }
     .feat-pop {
+        min-width: 10em;
+        width: 25em;
         text-align: center;
+        padding-bottom: 0.8em;
+        letter-spacing: 0.2em;
+        border-bottom: 1px solid rgba(52, 73, 94, 0.3);
+        user-select: none;
         span {
             cursor: pointer;
         }
         .fa-circle-thin {
             color: #34495e;
-            transform: scale(0.6);
-            margin: 0em 0.2em;
+            transform: scale(0.4);
+            margin: 0em 0.6em;
         }
         .feat {
         }
         .pop {
+
+        }
+    }
+    .product-gallery-container {
+        .product-img {
+            overflow: hidden;
+            position: relative;
+            height: 18em;
+            margin-bottom: 1.7em;
+            & > img {
+                width: 100%;
+                height: auto;
+            }
+            &:after {
+                content: '';
+                background: rgba(0, 0, 0, 1);
+                opacity: 0;
+                transition: 0.2s ease-in;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                position: absolute;
+            }
+        }
+    }
+    .see-more-btn-row {
+        margin-top: 1.8em;
+        p {
+            button {
+                padding: 0.5em 3em;
+                background-color: transparent;
+                color: #34495e!important;
+                font-weight: bolder;
+                font-size: 1em;
+                border: 2px solid #34495e;
+                border-radius: 0!important;
+            }
+        }
+    }
+}
+
+.section-mid {
+    height: 70%;
+    .row {
+        height: 100%;
+        .left {
+            background-color: grey;
+            height: 100%;
+        }
+        .right {
+            background-color: maroon;
+            height: 100%;
 
         }
     }

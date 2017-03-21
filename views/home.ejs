@@ -20,11 +20,38 @@
 </section>
 <section class="container section-feat-pop">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12 feat-pop-container">
             <div class="feat-pop">
                 <span class="feat feat-pop-select">FEATURED </span> <i class="fa fa-circle-thin" aria-hidden="true"></i> <span class="pop"> POPULAR</span>
             </div>
         </div>
+    </div>
+    <div class="row">
+        <% for(var x = 0; x < 8; x++) { %>
+            <div class="col-lg-3 text-center product-gallery-container">
+                <figure class="product-img">
+                    <img src="/img/dev/clothes<%= x + 1 %>.jpg" alt="">
+                    <figcaption>
+                        <h3></h3>
+                        <span></span>
+                        <a href="#">Take a look</a>
+                    </figcaption>
+                </figure>
+            </div>
+        <% } %>
+    </div>
+    <div class="row see-more-btn-row">
+        <div class="col-lg-12 see-more-btn-container text-center">
+            <div class="see-more-btn">
+                <p><button class="btn" type="button">View all products</button></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container-fluid section-mid">
+    <div class="row text-center">
+        <div class="col-lg-6 left">Left</div>
+        <div class="col-lg-6 right">Right</div>
     </div>
 </section>
 

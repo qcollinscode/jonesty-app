@@ -1,5 +1,3 @@
-$mainFontFamily: 'crimson text', serif;
-
 header {
     nav {
         border-radius: 0!important;
@@ -128,24 +126,15 @@ header {
     }
     .feat-pop {
         min-width: 10em;
-        width: 25em;
         text-align: center;
-        padding-bottom: 0.8em;
+        padding: 0.24em 0em;
         letter-spacing: 0.2em;
-        border-bottom: 1px solid rgba(52, 73, 94, 0.3);
         user-select: none;
+        transition: 0.2s ease-in;
         span {
             cursor: pointer;
-        }
-        .fa-circle-thin {
-            color: #34495e;
-            transform: scale(0.4);
-            margin: 0em 0.6em;
-        }
-        .feat {
-        }
-        .pop {
-
+            padding: 0.4em 0.6em;
+            transition: 0.2s ease-in;
         }
     }
     .product-gallery-container {
@@ -175,40 +164,32 @@ header {
         margin-top: 1.8em;
         p {
             button {
-                padding: 0.5em 3em;
+                padding: 0.2em 0.6em;
                 background-color: transparent;
                 color: #34495e!important;
                 font-weight: bolder;
-                font-size: 1em;
-                border: 2px solid #34495e;
+                font-size: 0.99em;
+                letter-spacing: 0.1em;
                 border-radius: 0!important;
+                transition: 0.2s ease-in;
+                &:hover {
+                    background-color: rgba(52, 73, 94, 0.1);
+                }
             }
         }
     }
 }
 
-.section-mid {
-    height: 24em;
-    // background: url(./../img/dev/jewelstrip.jpeg) no-repeat center center;
-    // background-size: cover;
-    // position: relative;
-    // &:after {
-    //     content: '';
-    //     position: absolute;
-    //     height: 100%;
-    //     width: 100%;
-    //     top: 0;
-    //     left: 0;
-    //     opacity: 0.86;
-    //     background-color: white;
-    // }
+.section-jewelry {
+    position: relative;
+    display: block;
+    margin-bottom: 6em;
     .row {
-        height: 100%;
          .text-container {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: 100%;
+            height: 24em;
             z-index: 1;
             text-align: left;
             & > .text {
@@ -219,9 +200,20 @@ header {
         }
         .pic-container {
             position: relative;
-            height: 100%;
+            height: 24em;
             z-index: 1;
             overflow: hidden;
+            &:before {
+                content: '';
+                height: 100%;
+                width: 60%;
+                right: 3.4em;
+                z-index: 3;
+                position: absolute;
+                background-color: white;
+                opacity: 0;
+                transition: 0.2s ease-in;
+            }
             &:after {
                 content: '';
                 background-image: url(./../img/dev/ring.png);
@@ -235,29 +227,57 @@ header {
                 z-index: 2;
             }
         }
-        &:nth-child(even) {
-            .text-container {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                & > .text {
-                    top: 0;
-                    align-self: right;
-                }
-            }
-            .pic-container {
-                &:after {
-                    //transform: scaleX(-1);
-                    left: -25em;
-                }
-            }
+    }
+}
+
+.section-suscribe {
+    background: url(./../img/dev/jewelstrip.jpeg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 13em;
+    height: 20em;
+    &:after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.86;
+        background-color: white;
+    }
+}
+
+.section-blog {
+    .entry-container {
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        justify-content: center;
+        img {
+            width: auto;
+            max-height: 20em;
         }
     }
 }
 
-.pic {
+.pic2 {
     &:after {
-        background: url(./../img/dev/ring.png)!important;
+        background: url(./../img/dev/jewelry2.png)!important;
+        background-repeat: no-repeat!important;
+        background-position: 75% center!important;
+        background-size: auto 80%;
+      
+        top: 0.399em!important;
+    }
+}
+
+.pic3 {
+    &:after {
+        background: url(./../img/dev/jewelry3.png)!important;
+        background-repeat: no-repeat!important;
+        background-position: 75% center!important;
+        background-size: auto 80%!important;
     }
 }
 

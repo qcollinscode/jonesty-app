@@ -58,7 +58,8 @@ Q:::::::QQ::::::::Q   C:::::CCCCCCCC::::C  C:::::CCCCCCCC::::CO:::::::OOO:::::::
      var num = {
        login: false,
        items: 4,
-       userName: 'Joe32'
+       userName: 'Joe32',
+       blogs: ["blog1.jpg","blog2.jpg","blog3.jpg"]
      };
      res.render("home", {num: num});
    });

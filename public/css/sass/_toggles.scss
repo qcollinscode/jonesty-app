@@ -28,10 +28,18 @@
 
 .feat-pop-select {
 	color:#34495e!important;
+	background-color: rgba(52, 73, 94, 0.1);
+	padding: 0.6em;
 }
 
 .animate-overlay {
 	&:after {
 		opacity: 0.7!important;
 	}
+}
+
+.overlayPicContainer {
+    &:before {
+        opacity: 0.6!important;
+    }
 }

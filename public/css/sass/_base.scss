@@ -6,3 +6,11 @@ html {
         @extend html;
     }
 }
+
+h1, h2, h3, h4, h5 {
+    font-family: $mainFontFamily!important;
+}
+
+p {
+    font-family: $secondaryFontFamily!important;
+}

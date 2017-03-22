@@ -3787,11 +3787,18 @@
 /* line 29, ../sass/_toggles.scss */
 .feat-pop-select {
   color: #34495e !important;
+  background-color: rgba(52, 73, 94, 0.1);
+  padding: 0.6em;
 }
 
-/* line 34, ../sass/_toggles.scss */
+/* line 36, ../sass/_toggles.scss */
 .animate-overlay:after {
   opacity: 0.7 !important;
+}
+
+/* line 42, ../sass/_toggles.scss */
+.overlayPicContainer:before {
+  opacity: 0.6 !important;
 }
 
 /* line 1, ../sass/_base.scss */
@@ -3801,33 +3808,43 @@ html, html body {
   color: #34495e;
 }
 
-/* line 4, ../sass/_layout.scss */
+/* line 10, ../sass/_base.scss */
+h1, h2, h3, h4, h5 {
+  font-family: "crimson text", serif !important;
+}
+
+/* line 14, ../sass/_base.scss */
+p {
+  font-family: "Source Sans Pro", sans-serif !important;
+}
+
+/* line 2, ../sass/_layout.scss */
 header nav {
   border-radius: 0 !important;
 }
-/* line 8, ../sass/_layout.scss */
+/* line 6, ../sass/_layout.scss */
 header .topNav {
   margin-bottom: 0;
   background: #fff;
 }
-/* line 11, ../sass/_layout.scss */
+/* line 9, ../sass/_layout.scss */
 header .topNav a {
   color: black !important;
   font-family: "crimson text", serif;
 }
-/* line 14, ../sass/_layout.scss */
+/* line 12, ../sass/_layout.scss */
 header .topNav a:hover {
   color: grey !important;
 }
-/* line 18, ../sass/_layout.scss */
+/* line 16, ../sass/_layout.scss */
 header .topNav .topNav-brand {
   font-size: 15px;
 }
-/* line 21, ../sass/_layout.scss */
+/* line 19, ../sass/_layout.scss */
 header .topNav li > a {
   border-right: 0.1px solid #e7e7e7;
 }
-/* line 24, ../sass/_layout.scss */
+/* line 22, ../sass/_layout.scss */
 header .topNav .cart-items {
   background-color: maroon;
   padding: 4px 8px;
@@ -3835,7 +3852,7 @@ header .topNav .cart-items {
   font-weight: bold;
   border-radius: 50%;
 }
-/* line 33, ../sass/_layout.scss */
+/* line 31, ../sass/_layout.scss */
 header .bottomNav {
   margin-bottom: 0;
   border: none;
@@ -3847,32 +3864,32 @@ header .bottomNav {
   font-size: 1.2em;
   justify-content: center;
 }
-/* line 43, ../sass/_layout.scss */
+/* line 41, ../sass/_layout.scss */
 header .bottomNav a {
   color: #34495e !important;
 }
-/* line 45, ../sass/_layout.scss */
+/* line 43, ../sass/_layout.scss */
 header .bottomNav a:hover {
   color: grey !important;
 }
-/* line 49, ../sass/_layout.scss */
+/* line 47, ../sass/_layout.scss */
 header .bottomNav .navbar-brand {
   font-family: "crimson text", serif;
   font-size: 3.5em;
   letter-spacing: 0.1em;
 }
-/* line 54, ../sass/_layout.scss */
+/* line 52, ../sass/_layout.scss */
 header .bottomNav .container {
   font-family: "crimson text", serif;
 }
-/* line 56, ../sass/_layout.scss */
+/* line 54, ../sass/_layout.scss */
 header .bottomNav .container .mainCart {
   position: relative;
   line-height: 0.45em;
   font-size: 45px !important;
   color: #34495e;
 }
-/* line 61, ../sass/_layout.scss */
+/* line 59, ../sass/_layout.scss */
 header .bottomNav .container .mainCart .cart-items {
   position: absolute;
   top: -1em;
@@ -3884,7 +3901,7 @@ header .bottomNav .container .mainCart .cart-items {
   font-weight: bolder;
   color: #34495e;
 }
-/* line 71, ../sass/_layout.scss */
+/* line 69, ../sass/_layout.scss */
 header .bottomNav .container .mainCart .cart-items:after {
   content: '';
   padding: 15px 18px;
@@ -3897,32 +3914,32 @@ header .bottomNav .container .mainCart .cart-items:after {
   z-index: -1;
 }
 
-/* line 88, ../sass/_layout.scss */
+/* line 86, ../sass/_layout.scss */
 .section-jumbotron {
   height: 100%;
 }
-/* line 90, ../sass/_layout.scss */
+/* line 88, ../sass/_layout.scss */
 .section-jumbotron > .row:first-child {
   height: 100%;
 }
-/* line 92, ../sass/_layout.scss */
+/* line 90, ../sass/_layout.scss */
 .section-jumbotron > .row:first-child .jumbotron {
   border-radius: 0 !important;
   height: 100%;
   background: url(./../img/dev/fashion-1636868_1920.jpg) no-repeat center top fixed;
 }
 
-/* line 100, ../sass/_layout.scss */
+/* line 98, ../sass/_layout.scss */
 .section-brand {
   margin-bottom: 6em;
 }
-/* line 102, ../sass/_layout.scss */
+/* line 100, ../sass/_layout.scss */
 .section-brand .txt-heading {
   text-align: center;
   font-size: 2em;
   font-family: "crimson text", serif;
 }
-/* line 107, ../sass/_layout.scss */
+/* line 105, ../sass/_layout.scss */
 .section-brand .txt-body p {
   text-align: center;
   font-family: "crimson text", serif;
@@ -3931,7 +3948,7 @@ header .bottomNav .container .mainCart .cart-items:after {
   margin: 0 auto;
 }
 
-/* line 116, ../sass/_layout.scss */
+/* line 114, ../sass/_layout.scss */
 .section-feat-pop {
   font-family: "crimson text", serif;
   font-size: 1.3em;
@@ -3939,48 +3956,43 @@ header .bottomNav .container .mainCart .cart-items:after {
   color: lightgrey;
   margin-bottom: 4em;
 }
-/* line 122, ../sass/_layout.scss */
+/* line 120, ../sass/_layout.scss */
 .section-feat-pop > div:first-child {
   margin-bottom: 3em;
 }
-/* line 125, ../sass/_layout.scss */
+/* line 123, ../sass/_layout.scss */
 .section-feat-pop .feat-pop-container {
   display: flex;
   justify-content: center;
 }
-/* line 129, ../sass/_layout.scss */
+/* line 127, ../sass/_layout.scss */
 .section-feat-pop .feat-pop {
   min-width: 10em;
-  width: 25em;
   text-align: center;
-  padding-bottom: 0.8em;
+  padding: 0.24em 0em;
   letter-spacing: 0.2em;
-  border-bottom: 1px solid rgba(52, 73, 94, 0.3);
   user-select: none;
+  transition: 0.2s ease-in;
 }
-/* line 137, ../sass/_layout.scss */
+/* line 134, ../sass/_layout.scss */
 .section-feat-pop .feat-pop span {
   cursor: pointer;
+  padding: 0.4em 0.6em;
+  transition: 0.2s ease-in;
 }
-/* line 140, ../sass/_layout.scss */
-.section-feat-pop .feat-pop .fa-circle-thin {
-  color: #34495e;
-  transform: scale(0.4);
-  margin: 0em 0.6em;
-}
-/* line 152, ../sass/_layout.scss */
+/* line 141, ../sass/_layout.scss */
 .section-feat-pop .product-gallery-container .product-img {
   overflow: hidden;
   position: relative;
   height: 18em;
   margin-bottom: 1.7em;
 }
-/* line 157, ../sass/_layout.scss */
+/* line 146, ../sass/_layout.scss */
 .section-feat-pop .product-gallery-container .product-img > img {
   width: 100%;
   height: auto;
 }
-/* line 161, ../sass/_layout.scss */
+/* line 150, ../sass/_layout.scss */
 .section-feat-pop .product-gallery-container .product-img:after {
   content: '';
   background: white;
@@ -3992,53 +4004,68 @@ header .bottomNav .container .mainCart .cart-items:after {
   left: 0;
   position: absolute;
 }
-/* line 174, ../sass/_layout.scss */
+/* line 163, ../sass/_layout.scss */
 .section-feat-pop .see-more-btn-row {
   margin-top: 1.8em;
 }
-/* line 177, ../sass/_layout.scss */
+/* line 166, ../sass/_layout.scss */
 .section-feat-pop .see-more-btn-row p button {
-  padding: 0.5em 3em;
+  padding: 0.2em 0.6em;
   background-color: transparent;
   color: #34495e !important;
   font-weight: bolder;
-  font-size: 1em;
-  border: 2px solid #34495e;
+  font-size: 0.99em;
+  letter-spacing: 0.1em;
   border-radius: 0 !important;
+  transition: 0.2s ease-in;
+}
+/* line 175, ../sass/_layout.scss */
+.section-feat-pop .see-more-btn-row p button:hover {
+  background-color: rgba(52, 73, 94, 0.1);
 }
 
-/* line 190, ../sass/_layout.scss */
-.section-mid {
-  height: 24em;
+/* line 183, ../sass/_layout.scss */
+.section-jewelry {
+  position: relative;
+  display: block;
+  margin-bottom: 6em;
 }
-/* line 205, ../sass/_layout.scss */
-.section-mid .row {
-  height: 100%;
-}
-/* line 207, ../sass/_layout.scss */
-.section-mid .row .text-container {
+/* line 188, ../sass/_layout.scss */
+.section-jewelry .row .text-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  height: 24em;
   z-index: 1;
   text-align: left;
 }
-/* line 214, ../sass/_layout.scss */
-.section-mid .row .text-container > .text {
+/* line 195, ../sass/_layout.scss */
+.section-jewelry .row .text-container > .text {
   position: relative;
   top: -1.9em;
   width: 60%;
 }
-/* line 220, ../sass/_layout.scss */
-.section-mid .row .pic-container {
+/* line 201, ../sass/_layout.scss */
+.section-jewelry .row .pic-container {
   position: relative;
-  height: 100%;
+  height: 24em;
   z-index: 1;
   overflow: hidden;
 }
-/* line 225, ../sass/_layout.scss */
-.section-mid .row .pic-container:after {
+/* line 206, ../sass/_layout.scss */
+.section-jewelry .row .pic-container:before {
+  content: '';
+  height: 100%;
+  width: 60%;
+  right: 3.4em;
+  z-index: 3;
+  position: absolute;
+  background-color: white;
+  opacity: 0;
+  transition: 0.2s ease-in;
+}
+/* line 217, ../sass/_layout.scss */
+.section-jewelry .row .pic-container:after {
   content: '';
   background-image: url(./../img/dev/ring.png);
   background-repeat: no-repeat;
@@ -4050,23 +4077,53 @@ header .bottomNav .container .mainCart .cart-items:after {
   top: 0;
   z-index: 2;
 }
+
+/* line 233, ../sass/_layout.scss */
+.section-suscribe {
+  background: url(./../img/dev/jewelstrip.jpeg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 13em;
+  height: 20em;
+}
 /* line 239, ../sass/_layout.scss */
-.section-mid .row:nth-child(even) .text-container {
+.section-suscribe:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.86;
+  background-color: white;
+}
+
+/* line 252, ../sass/_layout.scss */
+.section-blog .entry-container {
   display: flex;
+  text-align: left;
   flex-direction: column;
   justify-content: center;
 }
-/* line 243, ../sass/_layout.scss */
-.section-mid .row:nth-child(even) .text-container > .text {
-  top: 0;
-  align-self: right;
-}
-/* line 249, ../sass/_layout.scss */
-.section-mid .row:nth-child(even) .pic-container:after {
-  left: -25em;
+/* line 257, ../sass/_layout.scss */
+.section-blog .entry-container img {
+  width: auto;
+  max-height: 20em;
 }
 
-/* line 259, ../sass/_layout.scss */
-.pic:after {
-  background: url(./../img/dev/ring.png) !important;
+/* line 265, ../sass/_layout.scss */
+.pic2:after {
+  background: url(./../img/dev/jewelry2.png) !important;
+  background-repeat: no-repeat !important;
+  background-position: 75% center !important;
+  background-size: auto 80%;
+  top: 0.399em !important;
+}
+
+/* line 276, ../sass/_layout.scss */
+.pic3:after {
+  background: url(./../img/dev/jewelry3.png) !important;
+  background-repeat: no-repeat !important;
+  background-position: 75% center !important;
+  background-size: auto 80% !important;
 }

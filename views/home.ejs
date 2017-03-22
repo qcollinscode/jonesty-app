@@ -9,7 +9,7 @@
 <section class="container section-brand">
     <div class="row">
         <div class="col-lg-12 text-center txt-heading">
-            <h1>Our Brand</h1>
+            <h1>Who Are We?</h1>
         </div>
     </div>
     <div class="row">
@@ -22,7 +22,7 @@
     <div class="row">
         <div class="col-lg-12 feat-pop-container">
             <div class="feat-pop">
-                <span class="feat feat-pop-select">FEATURED </span> <i class="fa fa-circle-thin" aria-hidden="true"></i> <span class="pop"> POPULAR</span>
+                <span class="feat feat-pop-select">FEATURED</span><span class="pop">POPULAR</span>
             </div>
         </div>
     </div>
@@ -43,28 +43,42 @@
     <div class="row see-more-btn-row">
         <div class="col-lg-12 see-more-btn-container text-center">
             <div class="see-more-btn">
-                <p><button class="btn" type="button">View all products</button></p>
+                <p><button class="btn" type="button">VIEW MORE</button></p>
             </div>
         </div>
     </div>
 </section>
-<section class="container-fluid section-mid">
-    <% var Textarr = []; %>
-    <% Textarr.push('<div class="text"><h3>A Womans Best Friend</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem impedit, suscipit aspernatur. Illum ipsam, eos, dolore enim vitae, ut magnam deserunt aperiam quaerat maxime, ab numquam excepturi distinctio recusandae quam.</p></div>'); %>
+<section class="container-fluid section-jewelry">
     <% for(var x = 0; x < 3; x++) { %>
         <div class="row">
-            <div class="col-lg-6 <%= tstClss = x % 2 === 0 ? 'pic-container' : 'text-container'; %>">
-                <% if (x % 2 === 1) {%>
-                    <%- Textarr[0] %>
-                <% } %>
+            <div class="col-lg-6 pic-container">
             </div>
-            <div class="col-lg-6 <%= tstClss = x % 2 === 1 ? 'pic-container' : 'text-container'; %>">
-                <% if (x % 2 === 0) {%>
-                    <%- Textarr[0] %>
-                <% } %>
+            <div class="col-lg-6 text-container">
+                <div class="text">
+                    <h3>A Girls Best Friend</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem impedit, suscipit aspernatur. Illum ipsam, eos, dolore enim vitae, ut magnam deserunt aperiam quaerat maxime, ab numquam excepturi distinctio recusandae quam.</p>
+                </div>
             </div>
         </div>
     <% } %>
+</section>
+<section class="container-fluid section-suscribe">
+    <div class="row">
+        <div class="col-lg-12">
+        </div>
+    </div>
+</section>
+<section class="container section-blog">
+    <div class="row text-center">
+    <% for(var x = 0; x < 3; x++) { %>
+        <div class="col-lg-4 entry-container">
+            <img src="/img/dev/<%= num.blogs[x] %>" class="img-responsive" alt="">
+            <h4 class="title">How To Save Money While Shopping</h4>
+            <p class="preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi molestiae architecto repellat doloremque, distinctio sequi! Consequuntur placeat beatae illo, saepe asperiores, eos est eveniet nam minima illum, ducimus cumque deserunt.</p>
+            <a href="#" class="readmore">Read More</a>
+        </div>
+    <% } %>
+    </div>
 </section>
 
 <% include partials/footer %>

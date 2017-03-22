@@ -3983,7 +3983,7 @@ header .bottomNav .container .mainCart .cart-items:after {
 /* line 161, ../sass/_layout.scss */
 .section-feat-pop .product-gallery-container .product-img:after {
   content: '';
-  background: black;
+  background: white;
   opacity: 0;
   transition: 0.2s ease-in;
   height: 100%;
@@ -4009,19 +4009,64 @@ header .bottomNav .container .mainCart .cart-items:after {
 
 /* line 190, ../sass/_layout.scss */
 .section-mid {
-  height: 70%;
+  height: 24em;
 }
-/* line 192, ../sass/_layout.scss */
+/* line 205, ../sass/_layout.scss */
 .section-mid .row {
   height: 100%;
 }
-/* line 194, ../sass/_layout.scss */
-.section-mid .row .left {
-  background-color: grey;
+/* line 207, ../sass/_layout.scss */
+.section-mid .row .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
+  z-index: 1;
+  text-align: left;
 }
-/* line 198, ../sass/_layout.scss */
-.section-mid .row .right {
-  background-color: maroon;
+/* line 214, ../sass/_layout.scss */
+.section-mid .row .text-container > .text {
+  position: relative;
+  top: -1.9em;
+  width: 60%;
+}
+/* line 220, ../sass/_layout.scss */
+.section-mid .row .pic-container {
+  position: relative;
   height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+/* line 225, ../sass/_layout.scss */
+.section-mid .row .pic-container:after {
+  content: '';
+  background-image: url(./../img/dev/ring.png);
+  background-repeat: no-repeat;
+  background-position: 75% center;
+  background-size: auto 80%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+/* line 239, ../sass/_layout.scss */
+.section-mid .row:nth-child(even) .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* line 243, ../sass/_layout.scss */
+.section-mid .row:nth-child(even) .text-container > .text {
+  top: 0;
+  align-self: right;
+}
+/* line 249, ../sass/_layout.scss */
+.section-mid .row:nth-child(even) .pic-container:after {
+  left: -25em;
+}
+
+/* line 259, ../sass/_layout.scss */
+.pic:after {
+  background: url(./../img/dev/ring.png) !important;
 }

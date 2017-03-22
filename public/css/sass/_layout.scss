@@ -160,7 +160,7 @@ header {
             }
             &:after {
                 content: '';
-                background: rgba(0, 0, 0, 1);
+                background: rgba(255, 255, 255, 1);
                 opacity: 0;
                 transition: 0.2s ease-in;
                 height: 100%;
@@ -188,18 +188,76 @@ header {
 }
 
 .section-mid {
-    height: 70%;
+    height: 24em;
+    // background: url(./../img/dev/jewelstrip.jpeg) no-repeat center center;
+    // background-size: cover;
+    // position: relative;
+    // &:after {
+    //     content: '';
+    //     position: absolute;
+    //     height: 100%;
+    //     width: 100%;
+    //     top: 0;
+    //     left: 0;
+    //     opacity: 0.86;
+    //     background-color: white;
+    // }
     .row {
         height: 100%;
-        .left {
-            background-color: grey;
+         .text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             height: 100%;
+            z-index: 1;
+            text-align: left;
+            & > .text {
+                position: relative;
+                top: -1.9em;
+                width: 60%;
+            }
         }
-        .right {
-            background-color: maroon;
+        .pic-container {
+            position: relative;
             height: 100%;
+            z-index: 1;
+            overflow: hidden;
+            &:after {
+                content: '';
+                background-image: url(./../img/dev/ring.png);
+                background-repeat: no-repeat;
+                background-position: 75% center;
+                background-size: auto 80%;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                z-index: 2;
+            }
+        }
+        &:nth-child(even) {
+            .text-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                & > .text {
+                    top: 0;
+                    align-self: right;
+                }
+            }
+            .pic-container {
+                &:after {
+                    //transform: scaleX(-1);
+                    left: -25em;
+                }
+            }
+        }
+    }
+}
 
-        }
+.pic {
+    &:after {
+        background: url(./../img/dev/ring.png)!important;
     }
 }
 

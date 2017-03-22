@@ -12,6 +12,9 @@
             this.body = $("body");
             this.productImg = $('.product-img');
             this.featPop = $(".feat-pop > span");
+            this.ringImage1 = $('.row:nth-child(1) > .pic-container');
+            this.ringImage2 = $('.row:nth-child(2) > .pic-container');
+            this.ringImage3 = $('.row:nth-child(3) > .pic-container');
             this.background = $('[data-type="background"]');
             this.scrollTop = this.window.pageYOffset || document.documentElement.scrollTop;
         },

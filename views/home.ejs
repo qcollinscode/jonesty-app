@@ -49,10 +49,22 @@
     </div>
 </section>
 <section class="container-fluid section-mid">
-    <div class="row text-center">
-        <div class="col-lg-6 left">Left</div>
-        <div class="col-lg-6 right">Right</div>
-    </div>
+    <% var Textarr = []; %>
+    <% Textarr.push('<div class="text"><h3>A Womans Best Friend</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem impedit, suscipit aspernatur. Illum ipsam, eos, dolore enim vitae, ut magnam deserunt aperiam quaerat maxime, ab numquam excepturi distinctio recusandae quam.</p></div>'); %>
+    <% for(var x = 0; x < 3; x++) { %>
+        <div class="row">
+            <div class="col-lg-6 <%= tstClss = x % 2 === 0 ? 'pic-container' : 'text-container'; %>">
+                <% if (x % 2 === 1) {%>
+                    <%- Textarr[0] %>
+                <% } %>
+            </div>
+            <div class="col-lg-6 <%= tstClss = x % 2 === 1 ? 'pic-container' : 'text-container'; %>">
+                <% if (x % 2 === 0) {%>
+                    <%- Textarr[0] %>
+                <% } %>
+            </div>
+        </div>
+    <% } %>
 </section>
 
 <% include partials/footer %>

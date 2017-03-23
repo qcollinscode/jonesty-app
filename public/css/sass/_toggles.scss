@@ -43,3 +43,13 @@
         opacity: 0.6!important;
     }
 }
+
+.animate-nav-button {
+	transform: rotate(90deg);
+}
+
+.navbar-fixed-top {
+	position:fixed!important;
+    top: 0!important;
+	width: 100%!important;
+}

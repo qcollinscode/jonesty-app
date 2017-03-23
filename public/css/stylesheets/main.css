@@ -3801,6 +3801,18 @@
   opacity: 0.6 !important;
 }
 
+/* line 47, ../sass/_toggles.scss */
+.animate-nav-button {
+  transform: rotate(90deg);
+}
+
+/* line 51, ../sass/_toggles.scss */
+.navbar-fixed-top {
+  position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+}
+
 /* line 1, ../sass/_base.scss */
 html, html body {
   height: 100%;
@@ -3857,39 +3869,38 @@ header .bottomNav {
   margin-bottom: 0;
   border: none;
   font-weight: bolder;
-  height: 8em;
-  min-height: 8em;
+  padding-top: 1em;
   display: flex;
   flex-direction: column;
   font-size: 1.2em;
   justify-content: center;
 }
-/* line 41, ../sass/_layout.scss */
+/* line 42, ../sass/_layout.scss */
 header .bottomNav a {
   color: #34495e !important;
 }
-/* line 43, ../sass/_layout.scss */
+/* line 44, ../sass/_layout.scss */
 header .bottomNav a:hover {
   color: grey !important;
 }
-/* line 47, ../sass/_layout.scss */
+/* line 48, ../sass/_layout.scss */
 header .bottomNav .navbar-brand {
   font-family: "crimson text", serif;
   font-size: 3.5em;
   letter-spacing: 0.1em;
 }
-/* line 52, ../sass/_layout.scss */
+/* line 53, ../sass/_layout.scss */
 header .bottomNav .container {
   font-family: "crimson text", serif;
 }
-/* line 54, ../sass/_layout.scss */
+/* line 55, ../sass/_layout.scss */
 header .bottomNav .container .mainCart {
   position: relative;
   line-height: 0.45em;
   font-size: 45px !important;
   color: #34495e;
 }
-/* line 59, ../sass/_layout.scss */
+/* line 60, ../sass/_layout.scss */
 header .bottomNav .container .mainCart .cart-items {
   position: absolute;
   top: -1em;
@@ -3901,7 +3912,7 @@ header .bottomNav .container .mainCart .cart-items {
   font-weight: bolder;
   color: #34495e;
 }
-/* line 69, ../sass/_layout.scss */
+/* line 70, ../sass/_layout.scss */
 header .bottomNav .container .mainCart .cart-items:after {
   content: '';
   padding: 15px 18px;
@@ -3914,32 +3925,32 @@ header .bottomNav .container .mainCart .cart-items:after {
   z-index: -1;
 }
 
-/* line 86, ../sass/_layout.scss */
+/* line 87, ../sass/_layout.scss */
 .section-jumbotron {
   height: 100%;
 }
-/* line 88, ../sass/_layout.scss */
+/* line 89, ../sass/_layout.scss */
 .section-jumbotron > .row:first-child {
   height: 100%;
 }
-/* line 90, ../sass/_layout.scss */
+/* line 91, ../sass/_layout.scss */
 .section-jumbotron > .row:first-child .jumbotron {
   border-radius: 0 !important;
   height: 100%;
   background: url(./../img/dev/fashion-1636868_1920.jpg) no-repeat center top fixed;
 }
 
-/* line 98, ../sass/_layout.scss */
+/* line 99, ../sass/_layout.scss */
 .section-brand {
   margin-bottom: 6em;
 }
-/* line 100, ../sass/_layout.scss */
+/* line 101, ../sass/_layout.scss */
 .section-brand .txt-heading {
   text-align: center;
   font-size: 2em;
   font-family: "crimson text", serif;
 }
-/* line 105, ../sass/_layout.scss */
+/* line 106, ../sass/_layout.scss */
 .section-brand .txt-body p {
   text-align: center;
   font-family: "crimson text", serif;
@@ -3948,7 +3959,7 @@ header .bottomNav .container .mainCart .cart-items:after {
   margin: 0 auto;
 }
 
-/* line 114, ../sass/_layout.scss */
+/* line 115, ../sass/_layout.scss */
 .section-feat-pop {
   font-family: "crimson text", serif;
   font-size: 1.3em;
@@ -3956,16 +3967,16 @@ header .bottomNav .container .mainCart .cart-items:after {
   color: lightgrey;
   margin-bottom: 4em;
 }
-/* line 120, ../sass/_layout.scss */
+/* line 121, ../sass/_layout.scss */
 .section-feat-pop > div:first-child {
   margin-bottom: 3em;
 }
-/* line 123, ../sass/_layout.scss */
+/* line 124, ../sass/_layout.scss */
 .section-feat-pop .feat-pop-container {
   display: flex;
   justify-content: center;
 }
-/* line 127, ../sass/_layout.scss */
+/* line 128, ../sass/_layout.scss */
 .section-feat-pop .feat-pop {
   min-width: 10em;
   text-align: center;
@@ -3974,23 +3985,18 @@ header .bottomNav .container .mainCart .cart-items:after {
   user-select: none;
   transition: 0.2s ease-in;
 }
-/* line 134, ../sass/_layout.scss */
+/* line 135, ../sass/_layout.scss */
 .section-feat-pop .feat-pop span {
   cursor: pointer;
   padding: 0.4em 0.6em;
   transition: 0.2s ease-in;
 }
-/* line 141, ../sass/_layout.scss */
+/* line 142, ../sass/_layout.scss */
 .section-feat-pop .product-gallery-container .product-img {
   overflow: hidden;
   position: relative;
   height: 18em;
   margin-bottom: 1.7em;
-}
-/* line 146, ../sass/_layout.scss */
-.section-feat-pop .product-gallery-container .product-img > img {
-  width: 100%;
-  height: auto;
 }
 /* line 150, ../sass/_layout.scss */
 .section-feat-pop .product-gallery-container .product-img:after {
@@ -4167,6 +4173,16 @@ header .bottomNav .container .mainCart .cart-items:after {
 }
 
 /* line 311, ../sass/_layout.scss */
+.navbar-header button {
+  border: none;
+  transition: 0.2s ease-in;
+}
+/* line 314, ../sass/_layout.scss */
+.navbar-header button:focus, .navbar-header button:hover, .navbar-header button:active {
+  background-color: transparent !important;
+}
+
+/* line 321, ../sass/_layout.scss */
 .pic2:after {
   background: url(./../img/dev/jewelry2.png) !important;
   background-repeat: no-repeat !important;
@@ -4175,7 +4191,7 @@ header .bottomNav .container .mainCart .cart-items:after {
   top: 0.399em !important;
 }
 
-/* line 322, ../sass/_layout.scss */
+/* line 332, ../sass/_layout.scss */
 .pic3:after {
   background: url(./../img/dev/jewelry3.png) !important;
   background-repeat: no-repeat !important;
@@ -4183,12 +4199,72 @@ header .bottomNav .container .mainCart .cart-items:after {
   background-size: auto 80% !important;
 }
 
-/* line 330, ../sass/_layout.scss */
+/* line 340, ../sass/_layout.scss */
 footer {
   border-top: 1px solid rgba(52, 73, 94, 0.3);
   padding-top: 1.8em;
 }
-/* line 333, ../sass/_layout.scss */
+/* line 343, ../sass/_layout.scss */
 footer h1, footer h2, footer h3, footer h4, footer h5 {
   font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  /* line 352, ../sass/_layout.scss */
+  .navbar-header {
+    float: none;
+  }
+
+  /* line 355, ../sass/_layout.scss */
+  .navbar-left, .navbar-right {
+    float: none !important;
+  }
+
+  /* line 358, ../sass/_layout.scss */
+  .navbar-toggle {
+    display: block;
+  }
+
+  /* line 361, ../sass/_layout.scss */
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* line 365, ../sass/_layout.scss */
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+
+  /* line 369, ../sass/_layout.scss */
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  /* line 372, ../sass/_layout.scss */
+  .navbar-nav {
+    float: none !important;
+    margin-top: 7.5px;
+  }
+
+  /* line 376, ../sass/_layout.scss */
+  .navbar-nav > li {
+    float: none;
+  }
+
+  /* line 379, ../sass/_layout.scss */
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* line 383, ../sass/_layout.scss */
+  .collapse.in {
+    display: block !important;
+  }
+}
+/* line 388, ../sass/_layout.scss */
+.navbar .navbar-collapse {
+  text-align: center;
 }

@@ -3,7 +3,8 @@
         init: function() {
             this.DOMCache();
             this.bindEvents();
-            this.attachClass();
+            this.attachImgClass();
+            this.navFixedTop();
         },
         DOMCache: function() {
             this.jumbotron = $(".jumbotron");
@@ -15,6 +16,8 @@
             this.ringImage2 = $('.row:nth-child(2) > .pic-container');
             this.ringImage3 = $('.row:nth-child(3) > .pic-container');
             this.background = $('[data-type="background"]');
+            this.navBarButton = $('.navbar-header > button');
+            this.bottomNav = $('.bottomNav');
             this.scrollTop = this.window.pageYOffset || document.documentElement.scrollTop;
         },
         bindEvents: function() {
@@ -27,8 +30,32 @@
             }
             this.productImg.mouseenter(this.animateGalleryImgOverlayOn.bind(this)).mouseleave(this.animateGalleryImgOverlayOff.bind(this));
             this.ringPicContainer.mouseenter(this.animateRingsImgOverlayOn.bind(this)).mouseleave(this.animateRingsImgOverlayOff.bind(this));
+            this.navBarButton.on('click', this.animateNavButton.bind(this));
+
         },
-        attachClass: function () {
+        navFixedTop: function() {
+            const bottomNav = this.bottomNav;
+            $(document).ready(function() {
+                $(window).scroll(function() {
+                    console.log($(window).scrollTop());
+                    if($(window).scrollTop() > 52) {
+                        bottomNav.addClass('navbar-fixed-top');
+                    }
+                    if($(window).scrollTop() < 53) {
+                        bottomNav.removeClass('navbar-fixed-top');
+                    }
+                });
+            });
+        },
+        animateNavButton: function() {
+            const navBarButton = this.navBarButton;
+            if(navBarButton.hasClass('animate-nav-button')) {
+                removeClass(navBarButton, 'animate-nav-button');
+            } else {
+                addClass(navBarButton, 'animate-nav-button');
+            }
+        },
+        attachImgClass: function () {
             this.ringImage2.addClass("pic2");
             this.ringImage3.addClass("pic3");
         },

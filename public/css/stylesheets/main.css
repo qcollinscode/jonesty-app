@@ -4079,39 +4079,94 @@ header .bottomNav .container .mainCart .cart-items:after {
 }
 
 /* line 233, ../sass/_layout.scss */
-.section-suscribe {
-  background: url(./../img/dev/jewelstrip.jpeg) no-repeat center center;
+.section-subscribe {
+  background: url(./../img/dev/jewelstrip.jpeg) no-repeat center center fixed;
   background-size: cover;
   position: relative;
   margin-bottom: 13em;
-  height: 20em;
+  height: 28em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-/* line 239, ../sass/_layout.scss */
-.section-suscribe:after {
+/* line 242, ../sass/_layout.scss */
+.section-subscribe:before {
   content: '';
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.86;
+  opacity: 0.60;
   background-color: white;
 }
-
 /* line 252, ../sass/_layout.scss */
+.section-subscribe .subscribe-box {
+  z-index: 5;
+  position: relative;
+}
+/* line 255, ../sass/_layout.scss */
+.section-subscribe .subscribe-box .fa-envelope {
+  font-size: 4.9em;
+}
+/* line 258, ../sass/_layout.scss */
+.section-subscribe .subscribe-box h1 {
+  font-weight: 100;
+  margin-bottom: 0.6em;
+}
+/* line 261, ../sass/_layout.scss */
+.section-subscribe .subscribe-box h1 span {
+  font-weight: 700;
+}
+/* line 265, ../sass/_layout.scss */
+.section-subscribe .subscribe-box p {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 1.6em;
+}
+/* line 271, ../sass/_layout.scss */
+.section-subscribe .subscribe-box form input {
+  border: none;
+  padding: 0.6em 1em;
+  border-bottom: 1px solid rgba(52, 73, 94, 0.7);
+  background-color: transparent;
+  margin-bottom: 1.5em;
+  font-size: 1.4em;
+}
+/* line 279, ../sass/_layout.scss */
+.section-subscribe .subscribe-box form button {
+  border: 1px solid rgba(52, 73, 94, 0.7);
+  padding: 0.5em 1.9em;
+  font-size: 1.2em;
+  font-weight: 700;
+  transition: 0.2s ease-in;
+  text-transform: uppercase;
+  background-color: #34495e;
+  color: white;
+}
+
+/* line 293, ../sass/_layout.scss */
+.section-blog {
+  margin-bottom: 11em;
+}
+/* line 295, ../sass/_layout.scss */
 .section-blog .entry-container {
   display: flex;
   text-align: left;
   flex-direction: column;
   justify-content: center;
 }
-/* line 257, ../sass/_layout.scss */
+/* line 300, ../sass/_layout.scss */
 .section-blog .entry-container img {
   width: auto;
   max-height: 20em;
 }
+/* line 304, ../sass/_layout.scss */
+.section-blog .entry-container h1, .section-blog .entry-container h2, .section-blog .entry-container h3, .section-blog .entry-container h4, .section-blog .entry-container h5 {
+  font-weight: 700;
+}
 
-/* line 265, ../sass/_layout.scss */
+/* line 311, ../sass/_layout.scss */
 .pic2:after {
   background: url(./../img/dev/jewelry2.png) !important;
   background-repeat: no-repeat !important;
@@ -4120,10 +4175,20 @@ header .bottomNav .container .mainCart .cart-items:after {
   top: 0.399em !important;
 }
 
-/* line 276, ../sass/_layout.scss */
+/* line 322, ../sass/_layout.scss */
 .pic3:after {
   background: url(./../img/dev/jewelry3.png) !important;
   background-repeat: no-repeat !important;
   background-position: 75% center !important;
   background-size: auto 80% !important;
+}
+
+/* line 330, ../sass/_layout.scss */
+footer {
+  border-top: 1px solid rgba(52, 73, 94, 0.3);
+  padding-top: 1.8em;
+}
+/* line 333, ../sass/_layout.scss */
+footer h1, footer h2, footer h3, footer h4, footer h5 {
+  font-weight: 700;
 }

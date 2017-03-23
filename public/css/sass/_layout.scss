@@ -230,25 +230,68 @@ header {
     }
 }
 
-.section-suscribe {
-    background: url(./../img/dev/jewelstrip.jpeg) no-repeat center center;
+.section-subscribe {
+    background: url(./../img/dev/jewelstrip.jpeg) no-repeat center center fixed;
     background-size: cover;
     position: relative;
-    margin-bottom: 13em;
-    height: 20em;
-    &:after {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        opacity: 0.86;
-        background-color: white;
+    margin-bottom: 13em;    
+    height: 28em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.60;
+            background-color: white;
+        }
+    .subscribe-box {
+        z-index: 5;
+        position: relative;
+        .fa-envelope {
+            font-size: 4.9em;
+        }
+        h1 {
+            font-weight: 100;
+            margin-bottom: 0.6em;
+            span {
+                font-weight: 700;
+            }
+        }
+        p {
+            font-size: 1.2em;
+            font-weight: 500;
+            margin-bottom: 1.6em;
+        }
+        form {
+            input {
+                border: none;
+                padding: 0.6em 1em;
+                border-bottom: 1px solid rgba(52, 73, 94, 0.7);
+                background-color: transparent;
+                margin-bottom: 1.5em;
+                font-size: 1.4em;
+            }
+            button {
+                border: 1px solid rgba(52, 73, 94, 0.7);
+                padding: 0.5em 1.9em;
+                font-size: 1.2em;
+                font-weight: 700;
+                transition: 0.2s ease-in;
+                text-transform: uppercase;
+                background-color: rgba(52, 73, 94, 1);
+                color: white;
+            }
+        }
     }
 }
 
 .section-blog {
+    margin-bottom: 11em;
     .entry-container {
         display: flex;
         text-align: left;
@@ -257,6 +300,9 @@ header {
         img {
             width: auto;
             max-height: 20em;
+        }
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
         }
     }
 }
@@ -282,5 +328,12 @@ header {
 }
 
 footer {
+    border-top: 1px solid rgba(52, 73, 94, 0.3);
+    padding-top: 1.8em;
+    h1, h2, h3, h4, h5 {
+        font-weight: 700;
+    }
+    a, p {
 
+    }
 }
